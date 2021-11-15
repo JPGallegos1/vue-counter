@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuejs First Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="counter__container">
+        <div class="counter">
+          <p v-text="count"></p>
+          <h3>Counter</h3>
+        </div>
+
+        <div class="flex">
+          <div class="flex margin-1">
+            <h3 class="margin-1">Total clicks:</h3>
+            <p v-text="totalClicks"></p>
+          </div>
+          <div class="flex">
+            <h3 class="margin-1">Counter raised to:</h3>
+            <p v-text="countRaisedTo">{{raisedTo}}</p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="margin-1">
+            <button class="button__decrement" @click="decrement()">-</button>
+          </div>
+          <div>
+            <button class="button__increment" @click="increment()">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
